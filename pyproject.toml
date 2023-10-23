@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "rl"
+version = "0.1.0"
+description = "Reinforcement Learning training"
+authors = ["David Soldevila <david.sundevila@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+huggingface-sb3 = "^3.0"
+swig = "^4.1.1"
+stable-baselines3 = "2.0.0a5"
+pyvirtualdisplay = "^3.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch-amd"
+url = "https://download.pytorch.org/whl/rocm5.6"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
