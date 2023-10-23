@@ -23,5 +23,6 @@ pip3 install gymnasium[box2d]
 
 ```bash
 export HSA_OVERRIDE_GFX_VERSION=10.3.0 #solve segfault when reading GPU memory https://www.reddit.com/r/archlinux/comments/12ympb5/segfault_when_using_pytorch_with_rocm/
-pytest -s
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 #solves issue with not-found library when rendering environments
+pytest -s -k <test to be executed>
 ```
