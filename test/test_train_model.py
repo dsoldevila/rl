@@ -1,10 +1,5 @@
-# Virtual display
-from pyvirtualdisplay import Display
-
-virtual_display = Display(visible=0, size=(1400, 900))
-virtual_display.start()
-
-####################################################
+import pytest
+from os import path
 
 import gymnasium as gym
 
@@ -17,10 +12,7 @@ from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.monitor import Monitor
 
 
-#####################################################
-
-
-def train_model(model_name: str):
+def test_train_model():
     env = make_vec_env('LunarLander-v2', n_envs=16)
 
     model = PPO(
@@ -38,7 +30,4 @@ def train_model(model_name: str):
     model.learn(total_timesteps=1000000)
     
     # Save the model
-    model.save(model_name)
-
-if __name__ == "__main__":
-    train_model("ppo-LunarLander-v2")
+    model.save(path.join("output", "ppo-LunarLander-v2"))

@@ -11,12 +11,19 @@ huggingface-sb3 = "^3.0"
 swig = "^4.1.1"
 stable-baselines3 = "2.0.0a5"
 pyvirtualdisplay = "^3.0"
+torch = {version = "^2.1.0+rocm5.6", source = "pytorch-amd"}
+torchvision = {version = "^0.16.0+rocm5.6", source = "pytorch-amd"}
+torchaudio = {version = "^2.1.0+rocm5.6", source = "pytorch-amd"}
 
 
 [[tool.poetry.source]]
 name = "pytorch-amd"
 url = "https://download.pytorch.org/whl/rocm5.6"
-priority = "primary"
+priority = "supplemental"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
 
 [build-system]
 requires = ["poetry-core"]
