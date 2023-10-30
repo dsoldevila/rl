@@ -160,4 +160,5 @@ cython_debug/
 #.idea/
 
 
-output
+src/unit1/output
+src/unit1/bonus/trained-envs-executables/linux/Huggy

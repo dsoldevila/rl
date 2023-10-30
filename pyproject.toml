@@ -6,7 +6,7 @@ authors = ["David Soldevila <david.sundevila@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.10.1,<=3.10.12"
 huggingface-sb3 = "^3.0"
 swig = "^4.1.1"
 stable-baselines3 = "2.0.0a5"
@@ -14,6 +14,8 @@ pyvirtualdisplay = "^3.0"
 torch = {version = "^2.1.0+rocm5.6", source = "pytorch-amd"}
 torchvision = {version = "^0.16.0+rocm5.6", source = "pytorch-amd"}
 torchaudio = {version = "^2.1.0+rocm5.6", source = "pytorch-amd"}
+mlagents = "1.0.0"
+mlagents-envs = "1.0.0"
 
 
 [[tool.poetry.source]]
